@@ -6,6 +6,7 @@
   "scripts": {
     "compile": "rimraf dist && tsc",
     "compile:release": "rimraf dist && tsc --sourceMap false",
+    "prepare": "npm run compile:release",
     "test": "mocha -r source-map-support/register -r ts-node/register --files --recursive -R spec test/**/*.spec.ts",
     "test:debug": "mocha -r source-map-support/register -r ts-node/register --inspect-brk --files --recursive test/**/*.spec.ts",
     "test:coverage": "nyc mocha -r source-map-support/register -r ts-node/register --recursive test/**/*.spec.ts",
